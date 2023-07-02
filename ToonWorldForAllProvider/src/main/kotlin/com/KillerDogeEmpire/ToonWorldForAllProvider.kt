@@ -1,4 +1,4 @@
-package com.KillerDogeEmprie
+package com.KillerDogeEmpire
 
 import android.util.Log
 
