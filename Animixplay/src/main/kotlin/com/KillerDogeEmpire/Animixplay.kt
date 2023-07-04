@@ -1,7 +1,7 @@
 package com.KillerDogeEmpire
 
 import com.fasterxml.jackson.annotation.JsonProperty
-import com.hexated.GogoExtractor.extractVidstream
+import com.KillerDogeEmpire.GogoExtractor.extractVidstream
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.LoadResponse.Companion.addAniListId
 import com.lagradost.cloudstream3.LoadResponse.Companion.addMalId
