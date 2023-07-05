@@ -1,9 +1,7 @@
 package com.KillerDogeEmpire
 
 import android.util.Log
-
 import com.fasterxml.jackson.annotation.JsonProperty
-
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
@@ -11,22 +9,18 @@ import com.lagradost.nicehttp.Requests
 import com.lagradost.nicehttp.Session
 import kotlinx.coroutines.delay
 import org.jsoup.nodes.Element
-
 import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.module.kotlin.KotlinModule
 import com.fasterxml.jackson.databind.json.JsonMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-
 //.\gradlew.bat PelisPlus4KProvider:deployWithAdb
 //adb logcat | find "TAG"
 //com.lagradost.cloudstream3.prerelease
-
 class WatchWrestlingProvider : MainAPI() { // all providers must be an instance of MainAPI
-    override var mainUrl = "https://watchwrestling.wtf"
+    override var mainUrl = "https://watchwrestling.ai"
     override var name = "Watch Wrestling"
     //override val hasMainPage = true
     override val hasMainPage = true
-
     override var lang = "en"
     override val hasDownloadSupport = true
     override val supportedTypes = setOf(
@@ -35,16 +29,23 @@ class WatchWrestlingProvider : MainAPI() { // all providers must be an instance 
     )
 
 
-
     override val mainPage = mainPageOf(
-            "/category/latest-wwe-shows/" to "Latest WWE Shows",
-            "/category/wwe-network/" to "Latest WWE Network Shows",
-            "/category/aew-shows/" to "Latest AEW Shows",
-            "/category/impact-wrestling/" to "Latest Impact Wrestling",
-            "/category/ufc/" to "Latest UFC Shows",
-            "/category/indy/" to "Latest INDY Shows",
-            "/category/njpw-wrestling-shows/" to "Latest NJPW Wrestling Shows",
-            "/category/wrestling-archives/" to "Latest Wrestling Archives",
+            "/sports/wwe-29-17/" to "Latest WWE Shows",
+            "/sports/raw-39/" to "Latest RAW WWE Shows",
+            "/sports/smackdown-30/" to "Latest Smackdown WWE Shows",
+            "/sports/nxt-20/" to "Latest NXT WWE Shows",
+            "/sports/aew-14/" to "Latest AEW Shows",
+            "/sports/ufc-17/" to "Latest UFC Shows",
+            "/sports/boxing-18/" to "Latest Boxing Shows",
+            "/sports/ppv-21/" to "Latest PPV Wrestling Shows",
+            "/sports/tna-impact-20/" to "Latest Impact Wrestling Shows",
+            "/sports/njpw-15/" to "Latest NJPW Shows",
+            "/sports/mma-11/" to "Latest MMA Shows",
+            "/sports/gcw-7/" to "Latest GCW Shows",
+            "/sports/roh-13/" to "Latest ROH Shows",
+            "/sports/total-divas-15/" to "Latest Total Divas Shows",
+            "/sports/main-event-14/" to "Latest Main Event Shows",
+            "/sports/other-sport-13/" to "Other Sports",
     )
 
 
