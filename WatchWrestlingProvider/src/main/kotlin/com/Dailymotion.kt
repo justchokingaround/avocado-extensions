@@ -1,8 +1,9 @@
-package com.KillerDogeEmpire
+package com
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.SubtitleFile
 import com.lagradost.cloudstream3.app
+import com.lagradost.cloudstream3.utils.AppUtils.tryParseJson
 import com.lagradost.cloudstream3.utils.ExtractorApi
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.Qualities
@@ -64,8 +65,8 @@ class Dailymotion : ExtractorApi() {
     }
 
     data class Config(
-        val context: Context,
-        val dmInternalData: InternalData
+            val context: Context,
+            val dmInternalData: InternalData
     )
 
     data class InternalData(

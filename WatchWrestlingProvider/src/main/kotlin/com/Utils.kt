@@ -1,4 +1,4 @@
-package com.KillerDogeEmprie
+package com.KillerDogeEmpire
 
 import com.fasterxml.jackson.core.json.JsonReadFeature
 import com.fasterxml.jackson.databind.DeserializationFeature

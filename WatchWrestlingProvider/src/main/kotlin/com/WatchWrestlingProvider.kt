@@ -22,7 +22,7 @@ import com.fasterxml.jackson.module.kotlin.readValue
 //com.lagradost.cloudstream3.prerelease
 
 class WatchWrestlingProvider : MainAPI() { // all providers must be an instance of MainAPI
-    override var mainUrl = "https://wrestlinglive.net/"
+    override var mainUrl = "https://watchwrestling.ai"
     override var name = "Watch Wrestling"
 
     //override val hasMainPage = true
