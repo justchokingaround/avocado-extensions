@@ -1,4 +1,4 @@
-version = 6
+version = 8
 
 
 cloudstream {
@@ -15,7 +15,7 @@ cloudstream {
      * 2: Slow
      * 3: Beta only
      * */
-    status = 0 // will be 3 if unspecified
+    status = 1 // will be 3 if unspecified
     tvTypes = listOf(
         "TvSeries",
         "Movie"
