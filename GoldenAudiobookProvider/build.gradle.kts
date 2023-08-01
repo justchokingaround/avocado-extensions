@@ -1,4 +1,4 @@
-version = 10
+version = 11
 
 
 cloudstream {
@@ -6,7 +6,7 @@ cloudstream {
     // All of these properties are optional, you can safely remove them
 
     description = "Audiobooks - Use Picture in Picture or VLC as external player"
-    authors = listOf("dontseehere")
+    authors = listOf("KillerDogeEmpire")
 
     /**
      * Status int as the following:

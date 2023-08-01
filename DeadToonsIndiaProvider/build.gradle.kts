@@ -1,4 +1,4 @@
-version = 11
+version = 12
 
 
 cloudstream {
@@ -6,7 +6,7 @@ cloudstream {
     // All of these properties are optional, you can safely remove them
 
     description = "Hard to scrap, dropped"
-    authors = listOf("dontseehere")
+    authors = listOf("KillerDogeEmpire")
 
     /**
      * Status int as the following:

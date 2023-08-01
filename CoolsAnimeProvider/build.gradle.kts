@@ -1,12 +1,12 @@
-version = 4
+version = 5
 
 
 cloudstream {
     language = "hi"
     // All of these properties are optional, you can safely remove them
 
-    description = "Hindi dubbed cartoons - Good site imo, if broken links found ping dontseehere on Discord"
-    authors = listOf("dontseehere")
+    description = "Hindi dubbed cartoons - Good site imo, if broken links found ping blonde_one on Discord"
+    authors = listOf("KillerDogeEmpire")
 
     /**
      * Status int as the following:

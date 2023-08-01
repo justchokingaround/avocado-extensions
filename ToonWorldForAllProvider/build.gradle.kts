@@ -1,12 +1,12 @@
-version = 8
+version = 9
 
 
 cloudstream {
     language = "hi"
     // All of these properties are optional, you can safely remove them
 
-    description = "REPORT BROKEN LINKS IN DISCORD AND PING DONTSEEHERE, Hindi cartoons, wait for other video quality to load, each takes 5 sec bcz rocklinks :/"
-    authors = listOf("dontseehere")
+    description = "REPORT BROKEN LINKS IN DISCORD AND PING blonde_one, Hindi cartoons, wait for other video quality to load, each takes 5 sec bcz rocklinks :/"
+    authors = listOf("KillerDogeEmpire")
 
     /**
      * Status int as the following:

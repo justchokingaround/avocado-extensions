@@ -1,4 +1,4 @@
-version = 2
+version = 3
 
 
 cloudstream {
@@ -6,7 +6,7 @@ cloudstream {
     // All of these properties are optional, you can safely remove them
 
     description = "Audiobooks with some more books not in other sources -  download in addition to GoldenAudiobooks if book not found there"
-    authors = listOf("dontseehere")
+    authors = listOf("KillerDogeEmpire")
 
     /**
      * Status int as the following:

@@ -1,4 +1,4 @@
-version = 9
+version = 10
 
 
 cloudstream {
@@ -6,7 +6,7 @@ cloudstream {
     // All of these properties are optional, you can safely remove them
 
     description = "hindi dubbed cartoons - only Doodstream works, wait 10 seconds for Mediafire links"
-    authors = listOf("dontseehere")
+    authors = listOf("KillerDogeEmpire")
 
     /**
      * Status int as the following:
