@@ -357,7 +357,7 @@ class NineAnimeProvider : MainAPI() {
                     val vizId = group[2]
                     val action = if (vids) "rawVizcloud" else "rawMcloud"
                     val futoken = app.get("https://vidstream.pro/futoken").text
-                    val body = "query=$vizId&futoken=$futoken
+                    val body = "query=$vizId&futoken=$futoken"
                     val ssaeUrl = app.post("https://9anime.eltik.net/$action?apikey=lagrapps", mapOf("Content-Type" to "application/x-www-form-urlencoded"), body).text
                     val ssae = app.get(ssaeUrl, headers = mapOf("Referer" to "https://vidstream.pro/")).text
                     val reg2 = Regex("((https|http).*list.*(m3u8|.mp4))")
