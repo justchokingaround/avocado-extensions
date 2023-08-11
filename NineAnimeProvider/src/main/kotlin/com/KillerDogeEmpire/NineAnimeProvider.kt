@@ -8,6 +8,7 @@ import com.lagradost.cloudstream3.utils.*
 import org.jsoup.Jsoup
 import com.lagradost.cloudstream3.utils.M3u8Helper.Companion.generateM3u8
 import kotlinx.coroutines.delay
+import org.json.JSONObject
 
 
 class NineAnimeProvider : MainAPI() {
@@ -356,7 +357,9 @@ class NineAnimeProvider : MainAPI() {
                     val vizId = group[2]
                     val action = if (vids) "rawVizcloud" else "rawMcloud"
                     val futoken = app.get("https://vidstream.pro/futoken").text
-                    val ssaeUrl = app.post("https://9anime.eltik.net/$action?query=$vizId&apikey=lagrapps", mapOf("query" to vizId, "futoken" to futoken)).text
+                    val map = "{\"query\":\"$vizId\",\"futoken\":\"$futoken\"}"
+                    val jsonBody = JSONObject(map).toString()
+                    val ssaeUrl = app.post("https://9anime.eltik.net/$action?apikey=lagrapps", mapOf("Content-Type" to "application/json"), jsonBody).text
                     val ssae = app.get(ssaeUrl, headers = mapOf("Referer" to "https://vidstream.pro/")).text
                     val reg2 = Regex("((https|http).*list.*(m3u8|.mp4))")
                     val m3u8 = reg2.find(ssae)?.destructured?.component1() ?: ""
