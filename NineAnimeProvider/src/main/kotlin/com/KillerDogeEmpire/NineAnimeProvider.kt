@@ -24,7 +24,7 @@ class NineAnimeProvider : MainAPI() {
         fun encode(input: String): String =
             java.net.URLEncoder.encode(input, "utf-8").replace("+", "%2B")
         private fun decode(input: String): String = java.net.URLDecoder.decode(input, "utf-8")
-        private const val consuNineAnimeApi = "https://api.consumet.org/anime/9anime"
+//        private const val consuNineAnimeApi = "https://api.consumet.org/anime/9anime"
 
     }
 
@@ -312,14 +312,14 @@ class NineAnimeProvider : MainAPI() {
         @JsonProperty("vrfQuery" ) var vrfQuery : String
     )
     private suspend fun consumetVrf(input: String): ConsumetVrfHelper{
-        return app.get("https://api.consumet.org/anime/9anime/helper?query=$input&action=vrf").parsed<ConsumetVrfHelper>()
+        return app.get("https://9anime.eltik.net/vrf?query=$input&apikey=lagrapps").parsed<ConsumetVrfHelper>()
     }
     private suspend fun decUrlConsu(serverID: String):String {
         val sa = consumetVrf(serverID)
         val encID = sa.url
         val videncrr = app.get("$mainUrl/ajax/server/$serverID?${sa.vrfQuery}=${encode(encID)}").parsed<Links>()
         val encUrl = videncrr.result?.url
-        val ses = app.get("https://api.consumet.org/anime/9anime/helper?query=$encUrl&action=decrypt").text
+        val ses = app.get("https://9anime.eltik.net/decrypt?query=$encUrl&apikey=lagrapps").text
         return ses.substringAfter("url\":\"").substringBefore("\"")
     }
 
@@ -354,8 +354,8 @@ class NineAnimeProvider : MainAPI() {
                     val regex = Regex("(.+?/)e(?:mbed)?/([a-zA-Z0-9]+)")
                     val group = regex.find(asss)!!.groupValues
                     val vizId = group[2]
-                    val action = if (vids) "vizcloud" else "mcloud"
-                    val ssae = app.get("https://api.consumet.org/anime/9anime/helper?query=$vizId&action=$action").text
+                    val action = if (vids) "rawVizcloud" else "rawMcloud"
+                    val ssae = app.get("https://9anime.eltik.net/$action?query=$vizId&apikey=lagrapps").text
                     val reg2 = Regex("((https|http).*list.*(m3u8|.mp4))")
                     val m3u8 = reg2.find(ssae)?.destructured?.component1() ?: ""
 
